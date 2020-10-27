@@ -1,0 +1,19 @@
+<%- include('./partials/header') %>
+
+  <div>
+    ID: <%= uuid %>
+  </div>
+
+  <% for(let key in userDetails){%>
+    <div>
+      <%= key %>: <%= userDetails[key] %>
+    </div>
+  <% } %> 
+
+  <% if (postStatus == 'SUCCESS') { %>
+    <script>
+      window.location.reload();
+    </script>
+  <% } %> 
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  python_server:
+    build: ./pythonServer
+    ports:
+      - "9002:9002"
+    volumes:
+      - .:/code
+    environment:
+      FLASK_ENV: development
+  
+  express_server:
+    build: ./expressServer
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/code
+    environment:
+      NODE_ENV: development
